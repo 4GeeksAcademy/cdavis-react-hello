@@ -1,38 +1,67 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-// include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./navbar";
+import Card from "./card";
+import Jumbotron from "./jumbotron";
 
-// create your first component
 const Home = () => {
-  return (
-    <div className="text-center">
-      <h1 className="text-center mt-5">Hello Rigo!</h1>
-      <p>
-        <img src={rigoImage} alt="Rigo Baby" />
-      </p>
-      <a href="#" className="btn btn-success">
-        If you see this green button... bootstrap is working...
-      </a>
-      <p>
-        Made by{" "}
-        <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with love!
-      </p>
+    return(
+    <div>
+        <Navbar 
+        logo = "HOLA"
+        
+        />
+        <Jumbotron
+         title = "A Warm Welcome"
+         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et posuere augue. Morbi semper commodo dolor, ut vulputate eros. Donec mollis, erat eget fermentum elementum, quam diam mollis urna, nec accumsan magna justo in urna. Curabitur et nibh mauris."
+         buttonLabel = "Call to Action!"
+         buttonUrl = "https://picsum.photos/"
+        />
+        <div className="card-container">
+          <div className="row">
+            <div className="col-3">
+            <Card 
+                imageSrc = "https://picsum.photos/600/400?random=1"
+                title = "Foto 1"
+                description = "Lorem ipsum dolor sit amet"
+                buttonUrl = "https://logoipsum.com/"
+                buttonLabel = "Website"
+              />
+            </div>
+            <div className="col-3">
+            <Card 
+                imageSrc = "https://picsum.photos/600/400?random=2"
+                title = "Foto 1"
+                description = "Lorem ipsum dolor sit amet"
+                buttonUrl = "https://logoipsum.com/"
+                buttonLabel = "Website"
+              />
+            </div>
+            <div className="col-3">
+            <Card 
+                imageSrc = "https://picsum.photos/600/400?random=3"
+                title = "Foto 1"
+                description = "Lorem ipsum dolor sit amet"
+                buttonUrl = "https://logoipsum.com/"
+                buttonLabel = "Website"
+              />
+            </div>
+            <div className="col-3">
+            <Card 
+                imageSrc = "https://picsum.photos/600/400?random=4"
+                title = "Foto 1"
+                description = "Lorem ipsum dolor sit amet"
+                buttonUrl = "https://logoipsum.com/"
+                buttonLabel = "Website"
+              />
+            </div>
+         
+       
+          </div>
+        </div>
+        
     </div>
-  );
+    );
 };
 
-const Navbar = (props) => {
-  return (
-    <nav className="navbar navbar-dark bg-dark">
-	</nav>
-  );
-};
-
-Navbar.propTypes = {
-  navbarUrl: PropTypes.string,
-  navbarLabel: PropTypes.string,
-};
-
-export { Home, Navbar }; // Use named exports instead of export default
+export default Home;
