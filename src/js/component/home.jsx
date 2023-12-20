@@ -1,8 +1,8 @@
 import React from "react";
-
 import Navbar from "./navbar";
 import Card from "./card";
 import Jumbotron from "./jumbotron";
+import Footer from "./footer";
 
 const Home = () => {
     return(
@@ -59,6 +59,10 @@ const Home = () => {
        
           </div>
         </div>
+        <Footer 
+        copyright = "Todos los derechos reservados"
+        
+        />
         
     </div>
     );
